@@ -19,7 +19,8 @@ class LapinManager {
 		LapinManager(unsigned long long int);
 		virtual ~LapinManager();
 
-		unsigned long long simulation(unsigned long long = 120);
+		unsigned long long simulation(unsigned long long = 120, bool = false);
+		void reset();
 };
 
 #endif

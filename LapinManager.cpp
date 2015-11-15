@@ -66,3 +66,15 @@ unsigned long long LapinManager::simulation(unsigned long long p_duree, bool p_p
     return population;
 }
 
+void LapinManager::reset() { // remise a zero pour refaire une simu
+    m_mois = 0;
+    /// RAZ du nombre de lapins
+    for(unsigned i = 0; i < m_males.size(); i++) {
+        m_males[i].nombre(0);
+        m_femelles[i].nombre(0);
+    }
+
+    /// Ajout de 2 individus
+    m_males[12].nombre(1);
+    m_femelles[12].nombre(1);
+}
