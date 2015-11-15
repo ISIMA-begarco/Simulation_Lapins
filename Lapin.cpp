@@ -1,6 +1,6 @@
 #include "Lapin.h"
 
-ClasseLapins::ClasseLapins(std::mt19937 * p_gen) : m_nombre(0), m_tauxDeSurvie(pow(0.5,1/12)), m_generateur(p_gen) {
+ClasseLapins::ClasseLapins(std::mt19937 * p_gen) : m_nombre(0), m_tauxDeSurvie(pow(0.5,((double)1/12))), m_generateur(p_gen) {
 
 }
 

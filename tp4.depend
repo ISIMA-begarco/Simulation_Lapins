@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1447583906 source:o:\onedrive\cours\zz2\simulation\tp4\lapin.cpp
+1447600302 source:o:\onedrive\cours\zz2\simulation\tp4\lapin.cpp
 	"Lapin.h"
 
-1447579897 o:\onedrive\cours\zz2\simulation\tp4\lapin.h
+1447599186 o:\onedrive\cours\zz2\simulation\tp4\lapin.h
 	<random>
+	<iostream>
 
-1447584017 source:o:\onedrive\cours\zz2\simulation\tp4\lapinmanager.cpp
+1447600186 source:o:\onedrive\cours\zz2\simulation\tp4\lapinmanager.cpp
 	"LapinManager.h"
 
 1447581571 o:\onedrive\cours\zz2\simulation\tp4\lapinmanager.h
@@ -14,7 +15,8 @@
 	<iostream>
 	"Lapin.h"
 
-1447582802 source:o:\onedrive\cours\zz2\simulation\tp4\main.cpp
+1447600059 source:o:\onedrive\cours\zz2\simulation\tp4\main.cpp
 	<iostream>
 	"LapinManager.h"
+	<cmath>
 

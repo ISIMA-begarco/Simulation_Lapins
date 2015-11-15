@@ -2,6 +2,7 @@
 #define _CLASSELAPINS_H_
 
 #include <random>
+#include <iostream>
 
 class ClasseLapins {
 	protected:

@@ -6,16 +6,16 @@ LapinManager::LapinManager(std::string p_str) :
     m_graine(p_str.begin(), p_str.end()), m_generateur(m_graine),
     m_mois(0), m_males(180,ClasseLapins(&m_generateur)), m_femelles(180,ClasseLapins(&m_generateur)) {  // 15 * 12
 
-	m_males[12].nombre(10);
-	m_femelles[12].nombre(10);
+	m_males[12].nombre(1);
+	m_femelles[12].nombre(1);
 
 	for(int i = 0 ; i < 9 ; ++i) {
-		m_males[i].tauxDeSurvie(pow(0.2,1/12));
-		m_femelles[i].tauxDeSurvie(pow(0.2,1/12));
+		m_males[i].tauxDeSurvie(pow(0.2,((double)1/12)));
+		m_femelles[i].tauxDeSurvie(pow(0.2,((double)1/12)));
 	}
 	for(int i = 132 ; i < 180 ; ++i) {    // 11*12 = 11 ans = 132 mois
-		m_males[i].tauxDeSurvie(pow(0.4-0.1*((int)(i-132)/12), 1/12));
-		m_femelles[i].tauxDeSurvie(pow(0.4-0.1*((int)(i-132)/12),1/12));
+		m_males[i].tauxDeSurvie(pow(0.4-0.1*((int)(i-132)/12), ((double)1/12)));
+		m_femelles[i].tauxDeSurvie(pow(0.4-0.1*((int)(i-132)/12),((double)1/12)));
 	}
 }
 
@@ -29,6 +29,7 @@ void LapinManager::simulation(unsigned long long p_duree) {
         /// mort veillissement
         unsigned long long      nouvelEffectifMale      = 0,
                                 nouvelEffectifFemelle   = 0;
+        population = 0;
         for(unsigned i = 0 ; i < m_males.size() ; ++i) {
             population += (nouvelEffectifMale + nouvelEffectifFemelle);
             nouvelEffectifMale = m_males[i].vieillissement(nouvelEffectifMale);
@@ -59,6 +60,7 @@ void LapinManager::simulation(unsigned long long p_duree) {
 
 
         cout << "[ " << (m_mois%12)+1 << "/" << 2000+(m_mois/12) << " ] Taille de la population : " << population << endl;
+        cout << "Nombre de naissances : " << naissances << endl;
     }
 }
 

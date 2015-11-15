@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "LapinManager.h"
+#include <cmath>
 
 using namespace std;
 
