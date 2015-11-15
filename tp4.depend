@@ -20,3 +20,24 @@
 	"LapinManager.h"
 	<cmath>
 
+1447601149 source:c:\users\benji\github\simulation_lapins\lapin.cpp
+	"Lapin.h"
+
+1447601149 c:\users\benji\github\simulation_lapins\lapin.h
+	<random>
+	<iostream>
+
+1447608504 source:c:\users\benji\github\simulation_lapins\lapinmanager.cpp
+	"LapinManager.h"
+
+1447608505 c:\users\benji\github\simulation_lapins\lapinmanager.h
+	<vector>
+	<random>
+	<iostream>
+	"Lapin.h"
+
+1447602233 source:c:\users\benji\github\simulation_lapins\main.cpp
+	<iostream>
+	"LapinManager.h"
+	<cmath>
+
