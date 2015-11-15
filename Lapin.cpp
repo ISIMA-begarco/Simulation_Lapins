@@ -62,4 +62,3 @@ unsigned long long ClasseLapins::reproduction(unsigned p_mois) {
     }
     return retour;
 }
-
