@@ -23,7 +23,7 @@ LapinManager::~LapinManager() {
 
 }
 
-unsigned long long LapinManager::simulation(unsigned long long p_duree, bool p_print) { // p_print indique si on a affiche ou pas
+unsigned long long LapinManager::simulation(unsigned long long p_duree) {
     unsigned long long      population = 0;
     for(m_mois = 0 ; m_mois < p_duree ; ++m_mois) {
         /// mort veillissement
@@ -58,23 +58,10 @@ unsigned long long LapinManager::simulation(unsigned long long p_duree, bool p_p
         m_femelles[0].nombre(naissances-males);
         population += naissances;
 
-        if(p_print) {
-                cout << "[ " << (m_mois%12)+1 << "/" << 2000+(m_mois/12) << " ] Taille de la population : " << population << endl;
-                cout << "Nombre de naissances : " << naissances << endl;
-        }
+
+        cout << "[ " << (m_mois%12)+1 << "/" << 2000+(m_mois/12) << " ] Taille de la population : " << population << endl;
+        cout << "Nombre de naissances : " << naissances << endl;
     }
     return population;
 }
 
-void LapinManager::reset() { // remise a zero pour refaire une simu
-    m_mois = 0;
-    /// RAZ du nombre de lapins
-    for(unsigned i = 0; i < m_males.size(); i++) {
-        m_males[i].nombre(0);
-        m_femelles[i].nombre(0);
-    }
-    
-    /// Ajout de 2 individus
-    m_males[12].nombre(1);
-    m_femelles[12].nombre(1);
-}
