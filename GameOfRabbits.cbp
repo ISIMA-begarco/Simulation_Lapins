@@ -2,15 +2,16 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="tp4" />
+		<Option title="GameOfRabbits" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/tp4" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/GameOfRabbits" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="-f 100" />
 				<Compiler>
 					<Add option="-O2" />
 					<Add option="-std=c++11" />
@@ -21,12 +22,13 @@
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/tp4" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/GameOfRabbits" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++11" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -34,11 +36,12 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Lapin.cpp" />
-		<Unit filename="Lapin.h" />
+		<Unit filename="ClasseLapins.cpp" />
+		<Unit filename="ClasseLapins.h" />
 		<Unit filename="LapinManager.cpp" />
 		<Unit filename="LapinManager.h" />
 		<Unit filename="main.cpp" />

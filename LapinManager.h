@@ -4,7 +4,8 @@
 #include <vector>
 #include <random>
 #include <iostream>
-#include "Lapin.h"
+#include <fstream>
+#include "ClasseLapins.h"
 
 class LapinManager {
 	protected:
@@ -13,13 +14,14 @@ class LapinManager {
 		unsigned long 					m_mois;
 		std::vector<ClasseLapins>		m_males,
 										m_femelles;
+		std::ofstream					m_file;
 
 	public:
 		LapinManager(std::string = "Les lapins c'est mieux en civet.");
-		LapinManager(unsigned long long int);
+		LapinManager(long double);
 		virtual ~LapinManager();
 
-		unsigned long long simulation(unsigned long long = 120, bool = false);
+		long double simulation(unsigned long long = 120, bool = false, bool = true);
 		void reset();
 };
 

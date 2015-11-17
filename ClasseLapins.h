@@ -6,7 +6,7 @@
 
 class ClasseLapins {
 	protected:
-		unsigned long			m_nombre;
+		long double     		m_nombre;
 		double					m_tauxDeSurvie;
 		std::mt19937          * m_generateur;
 
@@ -14,13 +14,13 @@ class ClasseLapins {
 		ClasseLapins(std::mt19937 *);
 		virtual ~ClasseLapins();
 
-		void nombre(const unsigned long long &);
+		void nombre(const long double &);
 		void tauxDeSurvie(const double &);
-		const unsigned long nombre() const;
+		const long double nombre() const;
 		const double tauxDeSurvie() const;
 
-		unsigned long long vieillissement(unsigned long long);
-		unsigned long long reproduction(unsigned);
+		long double vieillissement(long double);
+		long double reproduction(unsigned);
 };
 
 #endif

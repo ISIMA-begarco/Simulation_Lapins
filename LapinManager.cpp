@@ -17,51 +17,70 @@ LapinManager::LapinManager(std::string p_str) :
 		m_males[i].tauxDeSurvie(pow(0.4-0.1*((int)(i-132)/12), ((double)1/12)));
 		m_femelles[i].tauxDeSurvie(pow(0.4-0.1*((int)(i-132)/12),((double)1/12)));
 	}
+	m_file.open ("lap.out", std::ofstream::out | std::ofstream::trunc);
 }
 
 LapinManager::~LapinManager() {
-
+	m_file.close();
 }
 
-unsigned long long LapinManager::simulation(unsigned long long p_duree, bool p_print) { // p_print indique si on a affiche ou pas
-    unsigned long long      population = 0;
-    for(m_mois = 0 ; m_mois < p_duree ; ++m_mois) {
+long double LapinManager::simulation(unsigned long long p_duree, bool p_print, bool p_outFile) { // p_print indique si on a affiche ou pas
+    long double             population = 0,
+							dateStop = m_mois+p_duree;
+	bool					writeInFile = m_file.is_open() && p_outFile;
+    for(/*m_mois*/ ; m_mois < dateStop ; ++m_mois) {
         /// mort veillissement
-        unsigned long long      nouvelEffectifMale      = 0,
-                                nouvelEffectifFemelle   = 0;
+        long double             nouvelEffectifMale      = 0,
+                                nouvelEffectifFemelle   = 0,
+                                males   				= 0,
+                                femelles  	 			= 0,
+								morts 					= 0;
         population = 0;
         for(unsigned i = 0 ; i < m_males.size() ; ++i) {
+			males += nouvelEffectifMale;
+			femelles += nouvelEffectifFemelle;
             population += (nouvelEffectifMale + nouvelEffectifFemelle);
+			morts += (m_males[i].nombre()+m_femelles[i].nombre());
             nouvelEffectifMale = m_males[i].vieillissement(nouvelEffectifMale);
             nouvelEffectifFemelle = m_femelles[i].vieillissement(nouvelEffectifFemelle);
+			morts = morts - (nouvelEffectifMale+nouvelEffectifFemelle);
         }
 
         /// naissances
-        unsigned long long      naissances = 0,
-                                males = 0;
+        long double             naissances = 0,
+                                bebeMales = 0;
 
         for(unsigned i = 9 ; i < m_femelles.size() ; ++i) {         // nombre de naissances le mois
             naissances += m_femelles[i].reproduction(m_mois%12);
         }
         /// determination du sexe
         if(naissances >= 100) {           // traitement pour grand nombre de naissance
-            std::normal_distribution<double> normale(0.5*naissances,
-                                             sqrt(0.25*naissances));
-            males = round(normale(m_generateur));
+            std::normal_distribution<long double>   normale(0.5*naissances,
+                                                    sqrt(0.25*naissances));
+            bebeMales = round(normale(m_generateur));
         } else {                        // traitement individuel
             for(unsigned i = 0 ; i < naissances ; ++i) {
                 std::bernoulli_distribution bernoulli(0.5);
-                males += (bernoulli(m_generateur) ? 1 : 0);
+                bebeMales += (bernoulli(m_generateur) ? 1 : 0);
             }
         }
-        m_males[0].nombre(males);
-        m_femelles[0].nombre(naissances-males);
+        m_males[0].nombre(bebeMales);
+        m_femelles[0].nombre(naissances-bebeMales);
+		males += m_males[0].nombre();
+		femelles += m_femelles[0].nombre();
         population += naissances;
 
         if(p_print) {
-                cout << "[ " << (m_mois%12)+1 << "/" << 2000+(m_mois/12) << " ] Taille de la population : " << population << endl;
-                cout << "Nombre de naissances : " << naissances << endl;
+        	cout << "[ " << (m_mois%12)+1 << "/" << 2000+(m_mois/12) << " ]\t--------------------------------" << endl;
+			cout << "Nombre d'individus :\t" << population << endl;
+        	cout << "Nombre de naissances :\t" << naissances << endl;
+        	cout << "Nombre de morts :\t" << morts << endl;
+        	cout << "Nombre de males :\t" << males << endl;
+        	cout << "Nombre de femelles :\t" << femelles << endl;
         }
+		if(writeInFile) {
+			m_file << "[ " << (m_mois%12)+1 << "/" << 2000+(m_mois/12) << " ]\t" << population << "\t" << naissances << "\t" << morts << "\t" << males << "\t" << femelles << endl;
+		}
     }
     return population;
 }
