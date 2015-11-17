@@ -1,3 +1,20 @@
+/**
+ *
+ *	\file 		main.cpp
+ *	\brief 		Programme de simulation d'une population de lapins.
+ *	\author 	Benoit GARCON
+ *  \author     Benjamin BARBESANGE
+ *	\version 	1.0
+ *	\date 		20 Novembre 2015
+ *
+ *	Programme de simulation stochastique d'une population de lapins
+ *	a partir d'un couple d'un an.
+ *
+ */
+
+///	Definition du type de comptage
+#define		INTEGER		long double
+
 #include <iostream>
 #include <ostream>
 #include <algorithm>
@@ -12,21 +29,28 @@
 
 using namespace std;
 
-/** argv :	-v : verbose -> affiche a l'ecran
-			-f : file -> sort dans un fichier lap.out
-			first int : nombre d'annees d'un simulation
-			sec int : nombre de simulations
-**/
-
+/**
+ *
+ *	\fn int 	main(int argc, char ** argv)
+ *	\brief 		Effectue une ou plusieurs simulations d'un certain nombre d'annees.
+ *  \param 		option : -v pour le mode verbose et -f pour la sortie dans un fichier
+ *	\param 		int_1 : entier donnant le nombre d'annees d'une simulation [facultatif]
+ *	\param 		int_2 : entier donnant le nombre de simulations [facultatif]
+ *  \return 	0
+ *
+ *	Programme principal utilisant des long double
+ *
+ */
 int main(int argc, char ** argv) {
-    unsigned long long		years 			= 20,
-							repl 			= 1;
-    long double			  * res;
-	bool					writeOnScreen	= false,
-							writeInFile		= false;
-    LapinManager 			laps;
+    unsigned long long		years 			= 20,		// Nombre d'annees de simulation
+							repl 			= 1;		// Nombre de replication de la simulation
+    INTEGER				  * res;						//	Tableau de resultats
+	bool					writeOnScreen	= false,	// Booleen pour l'affichage
+							writeInFile		= false;	// Booleen pour l'ecriture dans un fichier lap.out
+    LapinManager 			laps;						// Objet de la simulation
 
-/// Traitement des entrees en ligne de commande
+
+	// Traitement des entrees en ligne de commande
 
 	unsigned numberOfIntInInput = 0;
 	for(int i = 1 ; i < argc ; i++) {
@@ -38,7 +62,7 @@ int main(int argc, char ** argv) {
 					writeInFile = true;
 				}
 			}
-		} else {
+		} else {	// recuperation des entiers
             std::string integer = argv[i];
 			if(numberOfIntInInput==0) {
 				istringstream(integer) >> years;
@@ -49,38 +73,23 @@ int main(int argc, char ** argv) {
 		}
 	}
 
-	res = new long double[repl];
+	res = new INTEGER[repl];	// initialisation du tableau des resultats
 
-	cout << "Arguments : annees = " << years << " et repetitions = " << repl << endl << endl;
 
-/// Combien de lapins sur ? tirages sur ? annees
-
+	// Boucle de simulation
     for(unsigned long long i = 0; i < repl; i++) {
         res[i] = laps.simulation(years * 12, writeOnScreen, writeInFile);
         laps.reset();
     }
 
     // Affichage des resultats
-    if(repl>1)
-	    std::copy(res, res+repl, std::ostream_iterator<long double>(std::cout, "\n"));
-
+    cout << endl << "Resultats :" << endl;
+	std::copy(res, res+repl, std::ostream_iterator<INTEGER>(std::cout, "\n"));
 	cout << endl;
+
 	// Liberation de la memoire
 	delete [] res;
 
 	return 0;
 }
 
-
-/// Combien d'annees pour ? lapins en faisant ? replications
-/*
-    for(unsigned k = 0; k < 10; k++) {
-        unsigned i = 0; res[0] = 0;
-        while(res[0] < 1000000000 && i < 2000) {
-            res[0] = laps.simulation(1 * 12, false);
-            i++;
-        }
-        cout << i << endl;
-        laps.reset();
-    }
-*/
