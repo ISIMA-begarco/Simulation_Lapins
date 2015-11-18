@@ -52,6 +52,7 @@ INTEGER LapinManager::simulation(unsigned long long p_duree, bool p_print, bool 
                                 males   				= 0,		//	Nombre de males total
                                 femelles  	 			= 0,		// Nombre de femelles	total
 								morts 					= 0;		// Nombre de morts mensuel
+        bool                    presenceReproducteur    = false;    // Y a t il un male reproducteur
         population = 0;
         for(unsigned i = 0 ; i < m_males.size() ; ++i) {
 			males += nouvelEffectifMale;
@@ -64,11 +65,14 @@ INTEGER LapinManager::simulation(unsigned long long p_duree, bool p_print, bool 
         }
 
         // naissances
-        INTEGER					naissances = 0,		// Nombre de naissances mensuel
-                                bebeMales = 0;		// Nombre de nouveaux nes males
-
-        for(unsigned i = 9 ; i < m_femelles.size() ; ++i) {         // nombre de naissances le mois
-            naissances += m_femelles[i].reproduction(m_mois%12);
+        INTEGER					naissances  = 0,		// Nombre de naissances mensuel
+                                bebeMales   = 0;		// Nombre de nouveaux nes males
+        unsigned                inc         = 9;        // indice de parcours
+        while(inc < 180 && !(presenceReproducteur=(m_males[inc++].nombre()!=0)));
+        if(presenceReproducteur) {
+            for(unsigned i = 9 ; i < m_femelles.size() ; ++i) {         // nombre de naissances le mois
+                naissances += m_femelles[i].reproduction(m_mois%12);
+            }
         }
         // determination du sexe
         if(naissances >= 100) {           // traitement pour grand nombre de naissance
@@ -115,3 +119,9 @@ void LapinManager::reset() { // remise a zero pour refaire une simu
     m_males[12].nombre(1);
     m_femelles[12].nombre(1);
 }
+
+void LapinManager::write(long double p_number) {
+    if(m_file.is_open())
+        m_file << p_number << endl;
+}
+

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['_7eclasselapins',['~ClasseLapins',['../class_classe_lapins.html#af59339e95b7fb57eac31d43548953018',1,'ClasseLapins']]],
-  ['_7elapinmanager',['~LapinManager',['../class_lapin_manager.html#a3c5144cc286b146d0e1ac5c3ad836c92',1,'LapinManager']]]
+  ['tauxdesurvie',['tauxDeSurvie',['../class_classe_lapins.html#af64bcaa5f29779b34b1816022b11b86e',1,'ClasseLapins::tauxDeSurvie(const double &amp;)'],['../class_classe_lapins.html#a01ef64ced9b31116bc0a9da04b9bd7a2',1,'ClasseLapins::tauxDeSurvie() const ']]]
 ];

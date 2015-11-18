@@ -96,10 +96,12 @@ WARN_LOGFILE            = "O:\OneDrive\GitHub\Simulation_Lapins\doxygen\doxygen.
 # configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = \
-	"..\ClasseLapins.h" \
-	"..\LapinManager.h" \
-	"..\main.cpp" \
 	"..\LapinManager.cpp" \
+	"..\Student.cpp" \
+	"..\LapinManager.h" \
+	"..\ClasseLapins.h" \
+	"..\main.cpp" \
+	"..\Student.h" \
 	"..\ClasseLapins.cpp" 
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          =

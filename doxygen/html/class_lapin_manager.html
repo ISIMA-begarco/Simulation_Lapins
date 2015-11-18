@@ -126,13 +126,16 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lapin_manager.html#a3c5144cc286b146d0e1ac5c3ad836c92">~LapinManager</a> ()</td></tr>
 <tr class="memdesc:a3c5144cc286b146d0e1ac5c3ad836c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructeur de la classe <a class="el" href="class_lapin_manager.html" title="Classe de simulation de population de lapins. ">LapinManager</a>. <br /></td></tr>
 <tr class="separator:a3c5144cc286b146d0e1ac5c3ad836c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd88d03f96c22f14140a9027a88809ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="main_8cpp.html#a91d43eadec33c80149f92e5abf5df58c">INTEGER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lapin_manager.html#abd88d03f96c22f14140a9027a88809ec">simulation</a> (unsigned long long=120, bool=false, bool=true)</td></tr>
+<tr class="memitem:abd88d03f96c22f14140a9027a88809ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_lapin_manager_8h.html#a0391012cd99f054647804c6a44d6f53b">INTEGER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lapin_manager.html#abd88d03f96c22f14140a9027a88809ec">simulation</a> (unsigned long long=120, bool=false, bool=true)</td></tr>
 <tr class="memdesc:abd88d03f96c22f14140a9027a88809ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simulation mensuelle de la population de lapins.  <a href="#abd88d03f96c22f14140a9027a88809ec">More...</a><br /></td></tr>
 <tr class="separator:abd88d03f96c22f14140a9027a88809ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ab5f23981f08a38be2602eec5c17424"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0ab5f23981f08a38be2602eec5c17424"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lapin_manager.html#a0ab5f23981f08a38be2602eec5c17424">reset</a> ()</td></tr>
 <tr class="memdesc:a0ab5f23981f08a38be2602eec5c17424"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remise a zero de la simulation. <br /></td></tr>
 <tr class="separator:a0ab5f23981f08a38be2602eec5c17424"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39c86592d84820c11b058863f2002d50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_lapin_manager.html#a39c86592d84820c11b058863f2002d50">write</a> (long double)</td></tr>
+<tr class="memdesc:a39c86592d84820c11b058863f2002d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ecrit un nombre dans le fichier.  <a href="#a39c86592d84820c11b058863f2002d50">More...</a><br /></td></tr>
+<tr class="separator:a39c86592d84820c11b058863f2002d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -195,7 +198,7 @@ std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="main_8cpp.html#a91d43eadec33c80149f92e5abf5df58c">INTEGER</a> LapinManager::simulation </td>
+          <td class="memname"><a class="el" href="_lapin_manager_8h.html#a0391012cd99f054647804c6a44d6f53b">INTEGER</a> LapinManager::simulation </td>
           <td>(</td>
           <td class="paramtype">unsigned long long&#160;</td>
           <td class="paramname"><em>p_mois</em> = <code>120</code>, </td>
@@ -233,6 +236,30 @@ std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
+<a class="anchor" id="a39c86592d84820c11b058863f2002d50"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void LapinManager::write </td>
+          <td>(</td>
+          <td class="paramtype">long double&#160;</td>
+          <td class="paramname"><em>p_number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ecrit un nombre dans le fichier. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_number</td><td>: nombre a ecrire </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_lapin_manager_8h_source.html">LapinManager.h</a></li>
 <li><a class="el" href="_lapin_manager_8cpp.html">LapinManager.cpp</a></li>
@@ -243,7 +270,7 @@ std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_lapin_manager.html">LapinManager</a></li>
-    <li class="footer">Generated on Wed Nov 18 2015 00:07:01 for GameOfRabbits by
+    <li class="footer">Generated on Wed Nov 18 2015 23:22:16 for GameOfRabbits by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>

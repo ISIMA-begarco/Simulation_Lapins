@@ -110,13 +110,13 @@ $(document).ready(function(){initNavTree('_lapin_manager_8h_source.html','');});
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#ifndef _LAPINMANAGER_H_</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define _LAPINMANAGER_H_</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_lapin_manager_8h.html#a91d43eadec33c80149f92e5abf5df58c">   18</a></span>&#160;<span class="preprocessor">#define         INTEGER         long double</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_classe_lapins_8h.html">ClasseLapins.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_classe_lapins_8h.html">ClasseLapins.h</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="_lapin_manager_8h.html#a0391012cd99f054647804c6a44d6f53b">   24</a></span>&#160;<span class="keyword">typedef</span>         <span class="keywordtype">long</span> <span class="keywordtype">double</span>     <a class="code" href="_lapin_manager_8h.html#a0391012cd99f054647804c6a44d6f53b">INTEGER</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_lapin_manager.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_lapin_manager.html">LapinManager</a> {</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">protected</span>:</div>
@@ -130,13 +130,16 @@ $(document).ready(function(){initNavTree('_lapin_manager_8h_source.html','');});
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <a class="code" href="class_lapin_manager.html#a635826cffc5adfd69db6ee9dff1c491b">LapinManager</a>(std::string = <span class="stringliteral">&quot;Les lapins c&#39;est mieux en civet.&quot;</span>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keyword">virtual</span> <a class="code" href="class_lapin_manager.html#a3c5144cc286b146d0e1ac5c3ad836c92">~LapinManager</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <a class="code" href="_lapin_manager_8h.html#a91d43eadec33c80149f92e5abf5df58c">INTEGER</a> <a class="code" href="class_lapin_manager.html#abd88d03f96c22f14140a9027a88809ec">simulation</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> = 120, <span class="keywordtype">bool</span> = <span class="keyword">false</span>, <span class="keywordtype">bool</span> = <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <a class="code" href="_lapin_manager_8h.html#a0391012cd99f054647804c6a44d6f53b">INTEGER</a> <a class="code" href="class_lapin_manager.html#abd88d03f96c22f14140a9027a88809ec">simulation</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <span class="keywordtype">long</span> = 120, <span class="keywordtype">bool</span> = <span class="keyword">false</span>, <span class="keywordtype">bool</span> = <span class="keyword">true</span>);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_lapin_manager.html#a0ab5f23981f08a38be2602eec5c17424">reset</a>();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                <span class="keywordtype">void</span> <a class="code" href="class_lapin_manager.html#a39c86592d84820c11b058863f2002d50">write</a>(<span class="keywordtype">long</span> <span class="keywordtype">double</span>);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_lapin_manager_html_a39c86592d84820c11b058863f2002d50"><div class="ttname"><a href="class_lapin_manager.html#a39c86592d84820c11b058863f2002d50">LapinManager::write</a></div><div class="ttdeci">void write(long double)</div><div class="ttdoc">Ecrit un nombre dans le fichier. </div><div class="ttdef"><b>Definition:</b> LapinManager.cpp:123</div></div>
 <div class="ttc" id="_classe_lapins_8h_html"><div class="ttname"><a href="_classe_lapins_8h.html">ClasseLapins.h</a></div><div class="ttdoc">Classe statistique de lapins du meme age. </div></div>
 <div class="ttc" id="class_lapin_manager_html"><div class="ttname"><a href="class_lapin_manager.html">LapinManager</a></div><div class="ttdoc">Classe de simulation de population de lapins. </div><div class="ttdef"><b>Definition:</b> LapinManager.h:34</div></div>
+<div class="ttc" id="_lapin_manager_8h_html_a0391012cd99f054647804c6a44d6f53b"><div class="ttname"><a href="_lapin_manager_8h.html#a0391012cd99f054647804c6a44d6f53b">INTEGER</a></div><div class="ttdeci">long double INTEGER</div><div class="ttdoc">Definition du type de comptage. </div><div class="ttdef"><b>Definition:</b> LapinManager.h:24</div></div>
 <div class="ttc" id="class_lapin_manager_html_a5d87c9019d2416d59fddfcae48e7fa15"><div class="ttname"><a href="class_lapin_manager.html#a5d87c9019d2416d59fddfcae48e7fa15">LapinManager::m_file</a></div><div class="ttdeci">std::ofstream m_file</div><div class="ttdoc">Fichier de sortie. </div><div class="ttdef"><b>Definition:</b> LapinManager.h:47</div></div>
 <div class="ttc" id="class_lapin_manager_html_aac382141129dc8058e4ef4565a5af63e"><div class="ttname"><a href="class_lapin_manager.html#aac382141129dc8058e4ef4565a5af63e">LapinManager::m_femelles</a></div><div class="ttdeci">std::vector&lt; ClasseLapins &gt; m_femelles</div><div class="ttdoc">Vecteur des classes d&#39;ages de lapins femelles. </div><div class="ttdef"><b>Definition:</b> LapinManager.h:43</div></div>
 <div class="ttc" id="class_lapin_manager_html_abd88d03f96c22f14140a9027a88809ec"><div class="ttname"><a href="class_lapin_manager.html#abd88d03f96c22f14140a9027a88809ec">LapinManager::simulation</a></div><div class="ttdeci">INTEGER simulation(unsigned long long=120, bool=false, bool=true)</div><div class="ttdoc">Simulation mensuelle de la population de lapins. </div><div class="ttdef"><b>Definition:</b> LapinManager.cpp:44</div></div>
@@ -146,15 +149,14 @@ $(document).ready(function(){initNavTree('_lapin_manager_8h_source.html','');});
 <div class="ttc" id="class_lapin_manager_html_a3c5144cc286b146d0e1ac5c3ad836c92"><div class="ttname"><a href="class_lapin_manager.html#a3c5144cc286b146d0e1ac5c3ad836c92">LapinManager::~LapinManager</a></div><div class="ttdeci">virtual ~LapinManager()</div><div class="ttdoc">Destructeur de la classe LapinManager. </div><div class="ttdef"><b>Definition:</b> LapinManager.cpp:39</div></div>
 <div class="ttc" id="class_lapin_manager_html_a2438e9202567cd9bb85b087abea2215b"><div class="ttname"><a href="class_lapin_manager.html#a2438e9202567cd9bb85b087abea2215b">LapinManager::m_generateur</a></div><div class="ttdeci">std::mt19937 m_generateur</div><div class="ttdoc">Generateur aleatoire Mersenne Twister. </div><div class="ttdef"><b>Definition:</b> LapinManager.h:39</div></div>
 <div class="ttc" id="class_lapin_manager_html_ae08a1fe001b8abcdb52e69756a36cf47"><div class="ttname"><a href="class_lapin_manager.html#ae08a1fe001b8abcdb52e69756a36cf47">LapinManager::m_mois</a></div><div class="ttdeci">unsigned long long m_mois</div><div class="ttdoc">Mois en cours. </div><div class="ttdef"><b>Definition:</b> LapinManager.h:41</div></div>
-<div class="ttc" id="class_lapin_manager_html_a0ab5f23981f08a38be2602eec5c17424"><div class="ttname"><a href="class_lapin_manager.html#a0ab5f23981f08a38be2602eec5c17424">LapinManager::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Remise a zero de la simulation. </div><div class="ttdef"><b>Definition:</b> LapinManager.cpp:105</div></div>
-<div class="ttc" id="_lapin_manager_8h_html_a91d43eadec33c80149f92e5abf5df58c"><div class="ttname"><a href="_lapin_manager_8h.html#a91d43eadec33c80149f92e5abf5df58c">INTEGER</a></div><div class="ttdeci">#define INTEGER</div><div class="ttdoc">Definition du type de comptage. </div><div class="ttdef"><b>Definition:</b> LapinManager.h:18</div></div>
+<div class="ttc" id="class_lapin_manager_html_a0ab5f23981f08a38be2602eec5c17424"><div class="ttname"><a href="class_lapin_manager.html#a0ab5f23981f08a38be2602eec5c17424">LapinManager::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Remise a zero de la simulation. </div><div class="ttdef"><b>Definition:</b> LapinManager.cpp:110</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="_lapin_manager_8h.html">LapinManager.h</a></li>
-    <li class="footer">Generated on Wed Nov 18 2015 00:07:01 for GameOfRabbits by
+    <li class="footer">Generated on Wed Nov 18 2015 23:22:15 for GameOfRabbits by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.10 </li>
   </ul>
