@@ -12,9 +12,6 @@
  *
  */
 
-///	Definition du type de comptage
-#define		INTEGER		long double
-
 #include <iostream>
 #include <ostream>
 #include <algorithm>
@@ -28,6 +25,9 @@
 #include "LapinManager.h"
 
 using namespace std;
+
+///	Definition du type de comptage
+typedef		long double     INTEGER;
 
 /**
  *

@@ -14,14 +14,14 @@
 #ifndef _LAPINMANAGER_H_
 #define _LAPINMANAGER_H_
 
-///	Definition du type de comptage
-#define		INTEGER		long double
-
 #include <vector>
 #include <random>
 #include <iostream>
 #include <fstream>
 #include "ClasseLapins.h"
+
+///	Definition du type de comptage
+typedef		long double     INTEGER;
 
 /**
  *

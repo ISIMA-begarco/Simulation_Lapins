@@ -99,6 +99,7 @@ INTEGER LapinManager::simulation(unsigned long long p_duree, bool p_print, bool 
 			m_file << "[ " << (m_mois%12)+1 << "/" << 2000+(m_mois/12) << " ]\t" << population << "\t" << naissances << "\t" << morts << "\t" << males << "\t" << femelles << endl;
 		}
     }
+    m_file << endl;
     return population;
 }
 

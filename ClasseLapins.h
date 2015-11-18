@@ -14,11 +14,11 @@
 #ifndef _CLASSELAPINS_H_
 #define _CLASSELAPINS_H_
 
-///	Definition du type de comptage
-#define		INTEGER		long double
-
 #include <random>
 #include <iostream>
+
+///	Definition du type de comptage
+typedef		long double     INTEGER;
 
 /**
  *
