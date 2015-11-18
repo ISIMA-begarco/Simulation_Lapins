@@ -119,3 +119,9 @@ void LapinManager::reset() { // remise a zero pour refaire une simu
     m_males[12].nombre(1);
     m_femelles[12].nombre(1);
 }
+
+void LapinManager::write(long double p_number) {
+    if(m_file.is_open())
+        m_file << p_number << endl;
+}
+

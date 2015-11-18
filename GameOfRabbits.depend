@@ -6,17 +6,17 @@
 	<random>
 	<iostream>
 
-1447881519 source:o:\onedrive\github\simulation_lapins\lapinmanager.cpp
+1447885210 source:o:\onedrive\github\simulation_lapins\lapinmanager.cpp
 	"LapinManager.h"
 
-1447880109 o:\onedrive\github\simulation_lapins\lapinmanager.h
+1447885096 o:\onedrive\github\simulation_lapins\lapinmanager.h
 	<vector>
 	<random>
 	<iostream>
 	<fstream>
 	"ClasseLapins.h"
 
-1447880115 source:o:\onedrive\github\simulation_lapins\main.cpp
+1447884425 source:o:\onedrive\github\simulation_lapins\main.cpp
 	<iostream>
 	<ostream>
 	<algorithm>
@@ -26,4 +26,10 @@
 	<cstring>
 	<string>
 	"LapinManager.h"
+	"Student.h"
+
+1447883199 source:o:\onedrive\github\simulation_lapins\student.cpp
+	"Student.h"
+
+1447883584 o:\onedrive\github\simulation_lapins\student.h
 

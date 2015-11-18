@@ -70,6 +70,12 @@ class LapinManager {
  		 *	\fn			void reset()
  		 */
 		void reset();
+		/**
+ 		 *	\brief		Ecrit un nombre dans le fichier
+ 		 *	\fn			void write(long double p_number)
+ 		 *  \param      p_number : nombre a ecrire
+ 		 */
+		void write(long double);
 };
 
 #endif

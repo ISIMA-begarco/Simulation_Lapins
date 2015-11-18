@@ -4,6 +4,7 @@ var class_lapin_manager =
     [ "~LapinManager", "class_lapin_manager.html#a3c5144cc286b146d0e1ac5c3ad836c92", null ],
     [ "reset", "class_lapin_manager.html#a0ab5f23981f08a38be2602eec5c17424", null ],
     [ "simulation", "class_lapin_manager.html#abd88d03f96c22f14140a9027a88809ec", null ],
+    [ "write", "class_lapin_manager.html#a39c86592d84820c11b058863f2002d50", null ],
     [ "m_femelles", "class_lapin_manager.html#aac382141129dc8058e4ef4565a5af63e", null ],
     [ "m_file", "class_lapin_manager.html#a5d87c9019d2416d59fddfcae48e7fa15", null ],
     [ "m_generateur", "class_lapin_manager.html#a2438e9202567cd9bb85b087abea2215b", null ],

@@ -4,8 +4,8 @@
 # definition des variables
 CXX = g++
 CXXFLAGS = -O2 -Wall -Wextra -g -std=c++11
-OBJ = main.o ClasseLapins.o LapinManager.o
-OBJI = mainI.o ClasseLapinsI.o LapinManagerI.o
+OBJ = main.o ClasseLapins.o LapinManager.o Student.o
+OBJI = mainI.o ClasseLapinsI.o LapinManagerI.o Student.o
 
 GameOfRabbits : $(OBJ)
 	$(CXX) $^ -o ./$@ $(CXXFLAGS) -lm
@@ -17,6 +17,9 @@ ClasseLapins.o : ClasseLapins.cpp ClasseLapins.h
 	$(CXX) -c $< -o $@ $(CXXFLAGS)
 
 LapinManager.o : LapinManager.cpp LapinManager.h
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
+	
+Student.o : Student.cpp Student.h
 	$(CXX) -c $< -o $@ $(CXXFLAGS)
 	
 GameOfRabbitsI : $(OBJI)
