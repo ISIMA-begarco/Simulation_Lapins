@@ -105,10 +105,12 @@ int main(int argc, char ** argv) {
 
     cout << endl << "Resultats :" << endl;
 	std::copy(res.begin(), res.end(), std::ostream_iterator<INTEGER>(std::cout, "\n"));
-	cout << endl << "Esperance :\t\t\t" << esperance << endl;
-	cout << "Variance :\t\t\t" << variance << endl;
+	cout << endl << "Esperance :\t\t\t";
+	printf("%.2LF\n", esperance);
+	cout << "Variance :\t\t\t";
+	printf("%.2LF\n", variance);
 	cout << "Intervalle de confiance :\t[";
-    printf("%.2lf ; %.2lf]\n",
+    printf("%.2LF ; %.2LF]\n",
            esperance-rayon,
            esperance+rayon);
 

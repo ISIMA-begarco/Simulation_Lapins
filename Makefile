@@ -3,7 +3,7 @@
 
 # definition des variables
 CXX = g++
-CXXFLAGS = -O2 -Wall -Wextra -g -std=c++11
+CXXFLAGS = -O2 -Wall -Wextra -pg -std=c++11
 OBJ = main.o ClasseLapins.o LapinManager.o Student.o
 OBJI = mainI.o ClasseLapinsI.o LapinManagerI.o Student.o
 
