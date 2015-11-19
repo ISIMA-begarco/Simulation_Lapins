@@ -1,0 +1,8 @@
+O:/OneDrive/GitHub/Simulation_Lapins/main.cpp:36: warning: argument 'option' of command @param is not found in the argument list of main(int argc, char **argv)
+O:/OneDrive/GitHub/Simulation_Lapins/main.cpp:36: warning: argument 'int_1' of command @param is not found in the argument list of main(int argc, char **argv)
+O:/OneDrive/GitHub/Simulation_Lapins/main.cpp:36: warning: argument 'int_2' of command @param is not found in the argument list of main(int argc, char **argv)
+O:/OneDrive/GitHub/Simulation_Lapins/main.cpp:45: warning: The following parameters of main(int argc, char **argv) are not documented:
+  parameter 'argc'
+  parameter 'argv'
+O:/OneDrive/GitHub/Simulation_Lapins/LapinManager.h:67: warning: The following parameters of LapinManager::simulation(unsigned long long p_mois=120, bool p_affichage=false, bool p_fileOut=true) are not documented:
+  parameter 'p_fileOut'
