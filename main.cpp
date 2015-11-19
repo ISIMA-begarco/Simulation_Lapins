@@ -43,7 +43,7 @@ typedef		long double     INTEGER;
  *
  */
 int main(int argc, char ** argv) {
-    unsigned long long		years 			= 20,		// Nombre d'annees de simulation
+    unsigned long long		years 			= 10,		// Nombre d'annees de simulation
 							repl 			= 1;		// Nombre de replication de la simulation
     vector<INTEGER>		    res;						// Tableau de resultats
 	bool					writeOnScreen	= false,	// Booleen pour l'affichage
